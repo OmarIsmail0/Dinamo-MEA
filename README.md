@@ -67,7 +67,7 @@ Ensure you have the following installed:
 
 3. **Edit Existing Post**
 
-   - Each post includes an edit button that opens a form pre-filled with the post's data.
+   - Each post includes an edit button that opens a pre-filled form with the post's data.
    - On submission, a PUT request updates the post on the API.
 
 4. **Delete Post**
@@ -165,7 +165,7 @@ This project uses the **JSONPlaceholder API**.
 
 1. **API Behavior**:
 
-   - The JSONPlaceholder API does not persist new posts. The POST, PUT, and DELETE requests simulate behavior and return responses as if the changes were made.
+   - The JSONPlaceholder API does not persist new posts. The POST, PUT, and DELETE requests simulate behaviour and return responses as if the changes were made.
 
 2. **Error Handling**:
 
@@ -178,7 +178,7 @@ This project uses the **JSONPlaceholder API**.
 
 ## Time Spent
 
-- **Core Tasks**: 2-4 hours
+- **Core Tasks and Optional Tasks**: 3-4 hours
 - **Testing and Debugging**: ~1 hour
 - **Documentation**: ~30 minutes
 
