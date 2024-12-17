@@ -13,7 +13,6 @@ This is a simple React application built using **Vite** and **Ant Design**. It f
 5. [API Reference](#api-reference)
 6. [Assumptions and Notes](#assumptions-and-notes)
 7. [Time Spent](#time-spent)
-8. [Instructions for Contributors](#instructions-for-contributors)
 
 ---
 
