@@ -1,5 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useEffect, useState } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
+
+const PostForm = lazy(() => import("./PostForm"));
+
 import { Table, Typography, Space, Form, Button, Modal, Input } from "antd";
 import { ColumnsType } from "antd/es/table";
 
@@ -7,8 +10,6 @@ import { deletePost, fetchPosts, updatePost } from "../api/posts";
 import { Post } from "../interfaces/Post";
 import { formatError, truncateText } from "../utils/helpers";
 import { Notification } from "./Notification";
-
-import PostForm from "./PostForm";
 
 const { Title } = Typography;
 
@@ -116,7 +117,9 @@ const PostTable: React.FC = () => {
 
   return (
     <div>
-      <PostForm onPostCreated={(newPost) => setPosts((prev) => [newPost, ...prev])} />
+      <Suspense fallback={<div>Loading Form...</div>}>
+        <PostForm onPostCreated={(newPost) => setPosts((prev) => [newPost, ...prev])} />
+      </Suspense>
 
       <Space direction="vertical" size="large" style={{ width: "100%" }}>
         <Title level={3} style={{ textAlign: "center" }}>
